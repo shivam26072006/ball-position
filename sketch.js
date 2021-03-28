@@ -16,7 +16,11 @@ function setup(){
 function draw(){
 
     background("black");
+    
+    if(keyDown("up")){
+        
 
+    }
     if(keyDown("up")){
         writePosition(0,-2); 
     }
@@ -36,10 +40,10 @@ function draw(){
     drawSprites();
 }
 
-function writePosition(x,y){
+function writePosition(a,b){
     database.ref('ball/position').set({
-        'x' : position.x+x ,
-        'y' : position.y+y
+        'x' : position.x+a ,
+        'y' : position.y+b
     })
 }
 
